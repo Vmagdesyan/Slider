@@ -29,7 +29,7 @@ class Slider extends React.Component {
         }
         this.state.max = this.state.slides.length;
         this.intervalBetweenSlides = this.intervalBetweenSlides.bind(this);
-        this.toogleAutoPlay = this.toogleAutoPlay.bind(this);
+        this.toggleAutoPlay = this.toggleAutoPlay.bind(this);
         this.nextOne = this.nextOne.bind(this);
         this.prevOne = this.prevOne.bind(this);
     }
@@ -51,7 +51,7 @@ class Slider extends React.Component {
             })
         }
     }
-    toogleAutoPlay() {
+    toggleAutoPlay() {
         this.setState({
             autoPlay: !this.state.autoPlay
         })
@@ -103,7 +103,7 @@ class Slider extends React.Component {
         ))
     }
     renderDots() {
-        return this.state.slides.map((itex, index) => (
+        return this.state.slides.map((item, index) => (
             <li
                 className={this.isActive(index) + " dots"}
                 key={index}
@@ -171,7 +171,7 @@ class Slider extends React.Component {
                 </ul>
                 <a
                     className="toggle-play"
-                    onClick={this.toogleAutoPlay}
+                    onClick={this.toggleAutoPlay}
                 >
                     {this.renderPlayStop()}
                 </a>

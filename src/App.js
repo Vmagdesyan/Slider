@@ -27,7 +27,7 @@ const MainWrapper = styled.main`
   height: 600px;
   padding-top: 130px;
   background: url(${url}) no-repeat;
-  backgrount-size: cover;
+  background-size: cover;
 `
 class App extends React.Component {
   render() {
